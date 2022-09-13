@@ -1,0 +1,233 @@
+
+/* variables */
+
+:root{
+  /*primary*/
+  --clr-primary: #645cff;
+  --clr-primary-dark: #282566;
+  --clr-primary-light: #a29dff;
+  --clr-primary-1:hsl(205, 61%,16%);
+  --clr-primary-2:hsl(205, 61%,23%);
+  --clr-primary-3:hsl(205, 61%,25%);
+  --clr-primary-4:hsl(205, 61%,29%);
+  /* light primary */
+  --clr-primay-5: #49a6e9;
+  --clr-primary-6: hsl(205, 61%,69%);
+  --clr-primary-7: hsl(205, 61%,71%);
+  --clr-primary-8: hsl(205, 65%,73%);
+  --clr-primary-9: hsl(205, 65%,75%);
+  --clr-primary-10: hsl(205, 61%,81%);
+  /* secondary */
+  --clr-secondary-1: hsl(181,91%,19%);
+  --clr-secondary-2: hsl(181,82%,23%);
+  --clr-secondary-3: hsl(181,81%,25%);
+  --clr-secondary-4: hsl(184,87%,27%);
+  /* light secondary */
+  --clr-secondary-5: #28cab2;
+  --clr-secondary-6: hsl(181,91%,36%);
+  --clr-secondary-7: hsl(182,91%,54%);
+  --clr-secondary-8: hsl(181,71%,63%);
+  --clr-secondary-9: hsl(183,81%,76%);
+  --clr-secondary-10: hsl(181,91%,86%);
+  /* grey */
+  --clr-grey-1: hsl(210,61%,19%);
+  --clr-grey-2: hsl(209,39%,25%);
+  --clr-grey-3: hsl(211,31%,23%);
+  --clr-grey-4: hsl(209,34%,39%);
+  /* light grey */
+  --clr-grey-5: hsl(210, 22%,49%);
+  --clr-grey-6: hsl(210, 25%,56%);
+  --clr-grey-7: hsl(210, 29%,64%);
+  --clr-grey-8: hsl(210, 31%,74%);
+  --clr-grey-9: hsl(212, 34%,86%);
+  --clr-grey-10: hsl(210, 36%,94%);
+  /* other colors*/
+  --clr-white:#fff;
+  --clr-black: #222;
+  --clr-lime:#fc5d65;
+  --clr-dodge:#4eacdc;
+  --clr-gold: #d5cd6d;
+  --clr-pink: #f28cab;
+  --clr-dark-red: hsl(360,67%,44%);
+  --clr-light-red: hsl(360,44%,67%);
+  --clr-dark-green: hsl(125,67%,44%);
+  --clr-light-green: hsl(125,44%,67%);
+  /* other var */
+  --Radius:.5rem;
+  --Spacing:.1rem;
+  --ff-primary: 'Roboto',sans-serif;
+  --ff-secondary: 'Courier New',
+    monospace;
+  --transition: all .3s linear;
+  --fixed-width: 620px;
+  --max-width: 1170px;
+  --shadow-1: 0 3px 1px 0 rgba(0,0,0,0.1),0 1px 3px 0 rgba(0,0,0,0.6);
+  --shadow-2: 0 6px 4px -1px rgba(0,0,0,0.1),0 4px 2px -1px rgba(0,0,0,0.6);
+  --shadow-3: 0 10px 15px -3px rgba(0,0,0,0.1),0 6px 4px -3px rgba(0,0,0,0.5);
+  --shadow-1: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.4);
+};
+
+/* 
+=============
+GLOBAL STYLES
+=============
+ */
+*,
+::after,
+::before {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+img {
+  display: block;
+  width:100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  font-family: var(--ff-secondary);
+  color: var(--clr-grey-1);
+  background: var(--clr-grey-10);
+  letter-spacing: var(--spacing);
+  line-height: 1.5;
+  font-size: .875rem
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.5;
+  margin-bottom: .375rem;
+  text-transform: capitalize;
+  font-family: var(--ff-primary);
+}
+h1{
+  font-size:2.75rem;
+  margin-top:0 ;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.75rem; 
+   margin-top:0 ;
+}
+h4 {
+  font-size: 1rem;
+}
+h5{
+  font-size: .875rem;
+}
+p {
+  color: var(--clr-grey);
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 766px){
+  h1 {
+    font-size: 3rem;
+  }
+  h2{
+    font-size:2.75rem;
+  }
+  h3 {
+    font-size:2.5rem;
+  }
+  h4 {
+    font-size: 1.75rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1;
+  }
+}
+@keyframes spinner{
+  0% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes bounce{
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframe humburger_puls {
+  0% {
+    transform: scale(1);
+  }
+  50{
+    transform:scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* 
+==============
+GLOBAL CLASSES
+==============
+*/
+.section {
+  padding: 5rem 0;
+}
+.section-center {
+  width:90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+@media screen and (min-width: 992px){
+  .section-center {
+    width: 95vw;
+  }
+}
+.btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
+  border-radius: var(--radius);
+  display:block;
+  padding: .375rem .75rem;
+  margin: 0 auto;
+  text-transform: capitalize;
+  font-family:var(--ff-primary);
+  font-weight: 600;
+  text-align: center;
+}
+/* 
+=============
+REDUX TOOLKIT
+============
+ */
+.loading {
+  width:6rem;
+  height: 6rem;
+  border-radius:50%;
+  margin: 0 auto;
+  border: 5px solid var(--clr-secondary-5);
+  animation: .4s spinner linear infinite;
+  text-align: center;
+  margin-top:20rem;
+  border-color: var(--clr-secondary-1) transparent;
+}
+
